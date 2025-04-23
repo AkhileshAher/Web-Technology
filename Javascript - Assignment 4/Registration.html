@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <script>
+        function reg2() {
+            var a = document.getElementById("t1").value; // Name
+            var b = document.getElementById("t2").value; // Mobile number
+
+            // Name validation
+            if (a.length != 0) {
+                if (!a.match(/^[a-zA-Z]+$/)) {
+                    alert("Enter alphabets only for name.");
+                    document.getElementById("t1").value = "";
+                    document.getElementById("t1").focus();
+                    return;
+                }
+            } else {
+                alert("Enter data for name.");
+                document.getElementById("t1").focus();
+                return;
+            }
+
+            // Mobile number validation
+            if (b.length != 0) {
+                if (b.length == 10) {
+                    if (!b.match(/^[0-9]+$/)) {
+                        alert("Enter digits only for mobile number.");
+                        document.getElementById("t2").value = "";
+                        document.getElementById("t2").focus();
+                        return;
+                    }
+                } else {
+                    alert("Enter a 10-digit mobile number.");
+                    document.getElementById("t2").focus();
+                    return;
+                }
+            } else {
+                alert("Enter data for mobile number.");
+                document.getElementById("t2").focus();
+                return;
+            }
+
+            alert("Registration Successful!");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1" align="center" cellpadding="10">
+            <caption><strong>REGISTRATION FORM</strong></caption>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="t1"></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" id="t2" maxlength="10"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="button" value="Submit" onclick="reg2()">
+                    <input type="reset" value="Cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
