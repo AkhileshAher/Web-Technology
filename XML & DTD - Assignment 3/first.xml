@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="first.css"?>
+
+<student>
+    <stud>
+        <rno>1</rno>
+        <name>Akhilesh</name>
+    </stud>
+
+    <stud>
+        <rno>2</rno>
+        <name>Adarsh</name>
+    </stud>
+</student>
